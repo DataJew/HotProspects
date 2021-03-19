@@ -26,9 +26,32 @@ struct ProspectsView: View {
         }
     }
     
+    var filterProspects: [Prospect] {
+        switch filter {
+        case .none:
+            return prospects.people
+        case .contacted:
+            return prospects.people.filter { $0.isContacted }
+        case .uncontacted:
+            return prospects.people.filter { !$0.isContacted }
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            Text("People: \(prospects.people.count)")
+            List {
+                ForEach(filterProspects) { prospect in
+                    
+                    VStack(alignment: .leading) {
+                        Text(prospect.name)
+                            .font(.headline)
+                        Text(prospect.emailAddress)
+                            .foregroundColor(.secondary)
+                        
+                    }
+                    
+                }
+            }
                 .navigationTitle(title)
                 .navigationBarItems(trailing: Button(action: {
                     let prospect = Prospect()
