@@ -50,6 +50,12 @@ struct ProspectsView: View {
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
                     }
+                    .contextMenu {
+                        Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
+                            // This calls the created function in Prospect class to send the change to other views
+                            self.prospects.toggle(prospect)
+                        }
+                    }
                 }
             }
                 .navigationTitle(title)
