@@ -11,7 +11,11 @@ class Prospect: Identifiable, Codable {
     var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
-    var isContacted = false
+    // Adding a filePrivate set allows only one view to write
+    // and other views only to read in order for other views
+    // not to have conflicting Booleans if the user is
+    // contacted
+    fileprivate(set) var isContacted = false
 }
 
 class Prospects: ObservableObject {
@@ -19,5 +23,10 @@ class Prospects: ObservableObject {
     
     init() {
         self.people = []
+    }
+    
+    func toggle(_ prospect: Prospect) {
+        objectWillChange.send()
+        prospect.isContacted.toggle()
     }
 }
