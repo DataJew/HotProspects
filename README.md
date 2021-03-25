@@ -14,7 +14,12 @@ iPhone 11 Pro Max
 
 ## Images 
 
-<img src="https://user-images.githubusercontent.com/61671107/112470723-601f8080-8d41-11eb-82ee-18b846aaabc1.PNG" width="200" height="500">
+<img src="https://user-images.githubusercontent.com/61671107/112470723-601f8080-8d41-11eb-82ee-18b846aaabc1.PNG" width="250" height="500">,
+<img src="https://user-images.githubusercontent.com/61671107/112471087-d7edab00-8d41-11eb-8193-86d2fb0f2420.PNG" width="250" height="500">,
+<img src="https://user-images.githubusercontent.com/61671107/112471187-f489e300-8d41-11eb-8e76-30b44d20fd29.PNG" width="250" height="500">
+
+
+
 
 
 
