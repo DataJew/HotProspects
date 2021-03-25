@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().barTintColor = UIColor.init(ciColor: .clear)
+     }
+    
     var prospects = Prospects()
     
     var body: some View {
@@ -33,9 +37,13 @@ struct ContentView: View {
                 Image(systemName: "person.crop.square")
                 Text("Me")
             }
+            
         }
+        .accentColor(Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)))
         .environmentObject(prospects)
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
